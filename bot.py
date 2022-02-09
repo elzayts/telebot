@@ -28,7 +28,8 @@ def help(update, context):
 
 def echo(update, context):
     users_message=update.message.text
-    update.message.reply_text(find_answer(users_message))
+    global engine
+    update.message.reply_text(find_answer(engine, users_message))
 
 def error(update, context):
     logger.warning('Update "%s" caused error "%s"', update, context.error)
