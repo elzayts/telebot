@@ -1,0 +1,115 @@
+{
+    "patterns":
+    [
+        {
+            "pattern": "hi*",
+            "answers": ["What's up dude"]
+        },
+        {
+            "pattern": "hello*",
+            "answers": ["Hi there"]
+        },
+        {
+            "pattern": "how are you*",
+            "answers": ["I'm fine, wbu?"]
+        },
+        {
+            "pattern": "what's up",
+            "answers": ["Not much, wbu?"]
+        },
+        {
+            "pattern": "sup",
+            "answers": ["Not much, wbu?"]
+        },
+        {
+            "pattern": "*s your name",
+            "answers": ["My name is Volodymir Vazovsky, nice to meet you"]
+        },
+        {
+            "pattern": "you are*",
+            "answers": ["Thank you, you're too ;)"]
+        },
+        {
+            "pattern": "*like<c>*",
+            "answers": ["I like <c> too!"]
+        },
+        {
+            "pattern": "*visited<c>*",
+            "answers": ["I would like to go to <c> too!"]
+        },
+        {
+            "pattern": "*been to <c>*",
+            "answers": ["I would like to go to <c> too!"]
+        },
+        {
+            "pattern": "*should*",
+            "answers": ["You really think so?", "Why do you think so?"]
+        },
+        {
+            "pattern": "*must*",
+            "answers": ["Are you sure about this?", "I am not sure about this"]
+        },
+        {
+            "pattern": "*may*",
+            "answers": ["What makes you think so?"]
+        },
+        {
+            "pattern": "*can*",
+            "answers": ["What else?"]
+        },
+        {
+            "pattern": "*has to*",
+            "answers": ["For real?", "You sure?"]
+        },
+        {
+            "pattern": "*have to*",
+            "answers": ["For real?", "You sure?"]
+        },
+        {
+            "pattern": "why*",
+            "answers": ["roses are red, sky is blue, i do not have any answer to you :)", "Everyone knows that", "How do you think should I know?"]
+        },
+        {
+            "pattern": "what*",
+            "answers": ["Nothing", "Unfortunately, I don't know", "Do I look like Google to you?"]
+        },
+        {
+            "pattern": "when*",
+            "answers": ["Unfortunately, I don't know", "It can't be measured in time...."]
+        },
+        {
+            "pattern": "where*",
+            "answers": ["It's none of your business", "Unfortunately, I don't know"]
+        },
+        {
+            "pattern": "who*",
+            "answers": ["Who knows", "I don't know unfortunately"]
+        },
+        {
+            "pattern": "*(",
+            "answers": ["Summertime sadness Oh, Ooo-ooh oh", ":-("]
+        },
+        {
+            "pattern": "*)",
+            "answers": [":-)"]
+        },
+        {
+            "pattern": "*nice*",
+            "answers": ["nice..."]
+        },
+        {
+            "pattern": "*happy*",
+            "answers": ["That's greate actually!"]
+        },
+        {
+            "pattern": "*un*",
+            "answers": ["world never changes"]
+        },
+        {
+            "pattern": "other",
+            "answers":["How do you feel?", "Let's talk about something else", "Better tell me more about yourself", "Didn't quite get what you mean here"]
+        }
+        
+
+    ]
+}

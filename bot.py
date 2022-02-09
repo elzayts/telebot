@@ -1,8 +1,13 @@
 
 import logging
+import typing
+import json
+from template_engine import TemplateEngine
+
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
+engine = None
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
@@ -23,12 +28,25 @@ def help(update, context):
 
 def echo(update, context):
     users_message=update.message.text
-    update.message.reply_text(users_message.upper())
-
+    update.message.reply_text(find_answer(users_message))
 
 def error(update, context):
     logger.warning('Update "%s" caused error "%s"', update, context.error)
 
+def find_answer(engine, user_message):
+    return engine.process_question(user_message)
+
+def get_patterns():
+    with open('patterns.json') as file:
+        data = json.load(file)
+
+    templates = []
+
+    for patterns in data:
+        for answer in patterns["answers"]:
+            templates.append(tuple(patterns["pattern"], answer))
+    
+    return templates
 
 def main():
     updater = Updater("5178687337:AAHxxFeBLsYRMOpBDwsDZZ58HaH2Pyo7p3I", use_context=True)
@@ -43,6 +61,9 @@ def main():
 
     # log all errors
     dp.add_error_handler(error)
+
+    global engine
+    engine = TemplateEngine(get_patterns())
 
     # Start the Bot
     updater.start_polling()
