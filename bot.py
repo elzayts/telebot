@@ -44,7 +44,8 @@ def get_patterns():
     patterns = data["patterns"]
     for pattern in patterns:
         for answer in pattern["answers"]:
-            templates.append(tuple(patterns["pattern"], answer))
+            t = (pattern["pattern"], answer)
+            templates.append(t)
     
     return templates
 
