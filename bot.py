@@ -41,9 +41,9 @@ def get_patterns():
         data = json.load(file)
 
     templates = []
-
-    for patterns in data:
-        for answer in patterns["answers"]:
+    patterns = data["patterns"]
+    for pattern in patterns:
+        for answer in pattern["answers"]:
             templates.append(tuple(patterns["pattern"], answer))
     
     return templates
