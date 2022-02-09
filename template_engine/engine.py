@@ -23,6 +23,9 @@ class TemplateEngine:
             result = self.parse_template(template, question, answer)
             if result is not None:
                 answers.append(result)
+        
+        if not answers:
+            answers.extend(["Let's talk about something else", "Better tell me more about yourself", "Didn't quite get what you mean here"])
 
         # filter out answers for raw '*' operator if there are more matched answers than just default ones
         if len(answers) > len(self.default_answers):

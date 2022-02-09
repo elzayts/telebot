@@ -107,9 +107,7 @@
         },
         {
             "pattern": "other",
-            "answers":["How do you feel?", "Let's talk about something else", "Better tell me more about yourself", "Didn't quite get what you mean here"]
+            "answers":["Let's talk about something else", "Better tell me more about yourself", "Didn't quite get what you mean here"]
         }
-        
-
     ]
 }
