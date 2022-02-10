@@ -67,7 +67,11 @@
         },
         {
             "pattern": "why*",
-            "answers": ["roses are red, sky is blue, i do not have any answer to you :)", "Everyone knows that", "How do you think should I know?"]
+            "answers": ["roses are red, sky is blue, i do not have any answer to you :)", "Everyone knows that", "How do you think should I know?", "Where and why is an eternal question, but I don't know the answer to this one ..."]
+        },
+        {
+            "pattern": "*favorite <c>*",
+            "answers":["I like everything equally", "No preferences", "I don't like <c>"]
         },
         {
             "pattern": "what*",
@@ -75,11 +79,11 @@
         },
         {
             "pattern": "when*",
-            "answers": ["Unfortunately, I don't know", "It can't be measured in time...."]
+            "answers": ["Unfortunately, I don't know", "It can't be measured in time....", "Where and why is an eternal question, but I don't know the answer to this one ..."]
         },
         {
             "pattern": "where*",
-            "answers": ["It's none of your business", "Unfortunately, I don't know"]
+            "answers": ["It's none of your business", "Unfortunately, I don't know", "Where and why is an eternal question, but I don't know the answer to this one ..."]
         },
         {
             "pattern": "who*",
@@ -108,6 +112,11 @@
         {
             "pattern": "other",
             "answers":["Let's talk about something else", "Better tell me more about yourself", "Didn't quite get what you mean here"]
+        },
+        {
+            "pattern": "are you*",
+            "answers":["Private is not public ... So I won't tell", "Quess", "I'm Queen of Great Britain"]
         }
+
     ]
 }
