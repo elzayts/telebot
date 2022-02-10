@@ -4,9 +4,10 @@ import random
 
 class TemplateEngine:
 
-    def __init__(self, templates):
+    def __init__(self, templates, questions):
         self.templates = templates
         self.default_answers = [answer for (template, answer) in templates if template == '*']
+        self.questions=questions
 
     def process_question(self, question):
         """

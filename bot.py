@@ -1,6 +1,7 @@
 
 import logging
 import typing
+import random
 import json
 from template_engine import TemplateEngine
 
@@ -30,6 +31,8 @@ def echo(update, context):
     users_message=update.message.text
     global engine
     update.message.reply_text(find_answer(engine, users_message))
+    if random.randint(0,100) % 3 == 0:
+        update.message.reply_text(random.choice(engine.questions))
 
 def error(update, context):
     logger.warning('Update "%s" caused error "%s"', update, context.error)
@@ -50,6 +53,13 @@ def get_patterns():
     
     return templates
 
+def get_questions():
+    with open('Questions.json') as file:
+        data = json.load(file)
+
+    questions = data["questions"]
+    return questions
+
 def main():
     updater = Updater("5178687337:AAHxxFeBLsYRMOpBDwsDZZ58HaH2Pyo7p3I", use_context=True)
 
@@ -65,7 +75,7 @@ def main():
     dp.add_error_handler(error)
 
     global engine
-    engine = TemplateEngine(get_patterns())
+    engine = TemplateEngine(get_patterns(), get_questions())
 
     # Start the Bot
     updater.start_polling()
