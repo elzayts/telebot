@@ -70,7 +70,7 @@
             "answers": ["roses are red, sky is blue, i do not have any answer to you :)", "Everyone knows that", "How do you think should I know?", "Where and why is an eternal question, but I don't know the answer to this one ..."]
         },
         {
-            "pattern": "*favorite <c>*",
+            "pattern": "*favorite<c>*",
             "answers":["I like everything equally", "No preferences", "I don't like <c>"]
         },
         {
